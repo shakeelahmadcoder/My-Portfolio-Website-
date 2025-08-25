@@ -3,10 +3,6 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata = {
-//   title: "Shakeel Ahmed Webs Developer",
-//   description: "Personal portfolio website of Shakeel Ahmed",
-// };
 
 export const metadata = {
   title: "Shakeel Ahmed | Web Developer",
