@@ -1,4 +1,4 @@
-import logo from "./logo.jpg"
+import logo from "./logo.png"
 import ecommerce1 from "./ecommerce1.jpg"
 import ecommerce2 from "./ecommerce2.jpg"
 import ecommerce3 from "./ecommerce3.jpg"
@@ -13,8 +13,8 @@ export const portfolioData = [
     title: "Forever Trendify – Fashion Ecommerce",
     category: "ecommerce",
     image: ecommerce1,
-    description:
-      "A full-stack fashion ecommerce platform built with the MERN stack, featuring product listings, cart, and secure checkout.",
+    description: "Full-stack fashion store with product listings, cart, and secure checkout — built end-to-end with MERN Stack.",
+    tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
     link: "https://forever-trendify.vercel.app/",
   },
   {
@@ -22,8 +22,8 @@ export const portfolioData = [
     title: "Modern Ecommerce Store",
     category: "ecommerce",
     image: ecommerce2,
-    description:
-      "A responsive and elegant online store built with React and Tailwind CSS, optimized for seamless shopping experiences.",
+    description: "Responsive online store with smooth UX, product filters, and optimized performance for maximum conversions.",
+    tech: ["React.js", "Tailwind CSS", "Node.js"],
     link: "https://ecomerece-website.vercel.app/",
   },
   {
@@ -31,8 +31,8 @@ export const portfolioData = [
     title: "Digital Assets Marketplace",
     category: "ecommerce",
     image: ecommerce3,
-    description:
-      "An ecommerce platform designed for selling digital assets with a clean UI and smooth user experience.",
+    description: "Ecommerce platform for selling digital assets — clean UI, instant delivery, and seamless payment flow.",
+    tech: ["React.js", "Tailwind CSS", "MongoDB"],
     link: "https://vercel.com/shakeelahmadcoders-projects/digital-assets-ecomerece-website-2tba",
   },
   {
@@ -40,8 +40,8 @@ export const portfolioData = [
     title: "Creative Portfolio Website",
     category: "portfolio",
     image: portfolio1,
-    description:
-      "A full-stack portfolio website for a UI/UX designer, featuring an admin panel, built with Next.js, MongoDB, and Tailwind CSS.",
+    description: "Full-stack portfolio for a UI/UX designer with a custom admin panel to manage projects and content.",
+    tech: ["Next.js", "MongoDB", "Tailwind CSS"],
     link: "https://aitbar-portflio-website.vercel.app/",
   },
   {
@@ -49,8 +49,8 @@ export const portfolioData = [
     title: "Military Academy Website",
     category: "education",
     image: education1,
-    description:
-      "A professional frontend website for a military academy, built with React and Tailwind CSS to deliver a clean educational interface.",
+    description: "Professional frontend website for a military academy — clean layout, fast performance, and mobile-first design.",
+    tech: ["React.js", "Tailwind CSS"],
     link: "https://miltary-academy-website.vercel.app/",
   },
 ];
