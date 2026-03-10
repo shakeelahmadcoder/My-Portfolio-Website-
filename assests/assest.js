@@ -1,60 +1,33 @@
 import logo from "./logo.png"
-import ecommerce1 from "./ecommerce1.jpg"
-import ecommerce2 from "./ecommerce2.jpg"
-import ecommerce3 from "./ecommerce3.jpg"
-import portfolio1 from "./portfolio1.jpg"
-import education1 from "./education1.jpg"
+import skytraders from "./skytraders.jpg"
+import filerify from "./filerify.jpg"
 export const assests = {logo}
+
+
 
 
 export const portfolioData = [
   {
     id: 1,
-    title: "Forever Trendify – Fashion Ecommerce",
-    category: "ecommerce",
-    image: ecommerce1,
-    description: "Full-stack fashion store with product listings, cart, and secure checkout — built end-to-end with MERN Stack.",
-    tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-    link: "https://forever-trendify.vercel.app/",
+    title: "Sky Traders Furniture Store",
+    category: "E‑Commerce Website",
+    image: skytraders,
+    description:
+      "Responsive full‑stack e‑commerce store for furniture and home décor with intuitive product browsing, shopping cart, and secure checkout.",
+    tech: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+    link: "https://skytraders.vercel.app",
   },
   {
     id: 2,
-    title: "Modern Ecommerce Store",
-    category: "ecommerce",
-    image: ecommerce2,
-    description: "Responsive online store with smooth UX, product filters, and optimized performance for maximum conversions.",
-    tech: ["React.js", "Tailwind CSS", "Node.js"],
-    link: "https://ecomerece-website.vercel.app/",
-  },
-  {
-    id: 3,
-    title: "Digital Assets Marketplace",
-    category: "ecommerce",
-    image: ecommerce3,
-    description: "Ecommerce platform for selling digital assets — clean UI, instant delivery, and seamless payment flow.",
-    tech: ["React.js", "Tailwind CSS", "MongoDB"],
-    link: "https://vercel.com/shakeelahmadcoders-projects/digital-assets-ecomerece-website-2tba",
-  },
-  {
-    id: 4,
-    title: "Creative Portfolio Website",
-    category: "portfolio",
-    image: portfolio1,
-    description: "Full-stack portfolio for a UI/UX designer with a custom admin panel to manage projects and content.",
-    tech: ["Next.js", "MongoDB", "Tailwind CSS"],
-    link: "https://aitbar-portflio-website.vercel.app/",
-  },
-  {
-    id: 5,
-    title: "Military Academy Website",
-    category: "education",
-    image: education1,
-    description: "Professional frontend website for a military academy — clean layout, fast performance, and mobile-first design.",
-    tech: ["React.js", "Tailwind CSS"],
-    link: "https://miltary-academy-website.vercel.app/",
+    title: "Filerify — Business Formation Platform",
+    category: "Business Services Website",
+    image: filerify,
+    description:
+      "Professional business services site offering U.S. company formation, tax compliance, EIN registration, and legal setup support for global entrepreneurs.",
+    tech: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
+    link: "https://www.filerify.com",
   },
 ];
-
 
 
 import { FaBriefcase, FaShoppingCart, FaLaptopCode, FaGlobe } from "react-icons/fa";

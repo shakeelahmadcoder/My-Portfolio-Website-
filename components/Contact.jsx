@@ -15,13 +15,29 @@ const METHODS = [
 
 const Contact = () => {
   const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({ name:"", email:"", message:"" });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // ── Build WhatsApp message ──
+    const text = `👋 Salam Shakeel! I contacted you from your website.
+
+──────────────────
+👤 Name  :  ${form.name}
+📧 Email :  ${form.email}
+──────────────────
+
+📋 Project Details:
+${form.message}
+──────────────────`;
+
+    const waURL = `https://wa.me/923142239460?text=${encodeURIComponent(text)}`;
+    window.open(waURL, "_blank");
+
     setSent(true);
     setTimeout(() => setSent(false), 3000);
-    setForm({ name:"", email:"", message:"" });
+    setForm({ name: "", email: "", message: "" });
   };
 
   return (
@@ -99,9 +115,18 @@ const Contact = () => {
 
           <button type="submit"
             className="group relative overflow-hidden w-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-3 rounded-xl transition-all hover:shadow-[0_0_28px_rgba(99,102,241,0.45)] hover:-translate-y-0.5">
-            {sent ? "✓ Message Sent!" : "Send Message →"}
+            <span className="flex items-center justify-center gap-2">
+              {sent
+                ? <><span>✓</span> Message Sent! Opening WhatsApp…</>
+                : <><FaWhatsapp className="text-green-300 text-base" /> Send via WhatsApp →</>
+              }
+            </span>
             <span className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 bg-gradient-to-r from-transparent via-white/15 to-transparent skew-x-[-20deg]" />
           </button>
+
+          <p className="text-center text-[10px] text-white/20">
+            Submitting will open WhatsApp with your message pre-filled.
+          </p>
         </motion.form>
       </div>
     </section>

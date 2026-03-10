@@ -8,14 +8,14 @@ import { Syne } from "next/font/google";
 
 const syne = Syne({ subsets: ["latin"], weight: ["700", "800"] });
 
-const CATS = ["all",  "ecommerce", "education", "portfolio"];
+// const CATS = ["all",  "ecommerce", "education", "portfolio"];
 
 const Portfolio = () => {
-  const [active, setActive] = useState("all");
+  // const [active, setActive] = useState("all");
 
-  const filtered = active === "all"
-    ? portfolioData
-    : portfolioData.filter(p => p.category === active);
+  // const filtered = active === "all"
+  //   ? portfolioData
+  //   : portfolioData.filter(p => p.category === active);
 
   return (
     <section id="portfolio" className="py-24 px-6 sm:px-12 lg:px-20 max-w-7xl mx-auto">
@@ -32,7 +32,7 @@ const Portfolio = () => {
       </motion.div>
 
       {/* ── Filter tabs ── */}
-      <motion.div initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.45, delay:0.1 }} className="flex flex-wrap justify-center gap-2 mb-12">
+      {/* <motion.div initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.45, delay:0.1 }} className="flex flex-wrap justify-center gap-2 mb-12">
         {CATS.map(cat => (
           <button
             key={cat}
@@ -46,12 +46,12 @@ const Portfolio = () => {
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
           </button>
         ))}
-      </motion.div>
+      </motion.div> */}
 
       {/* ── Grid ── */}
       <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <AnimatePresence mode="popLayout">
-          {filtered.map((project, i) => (
+          {portfolioData.map((project, i) => (
             <motion.div
               key={project.id}
               layout
@@ -114,12 +114,12 @@ const Portfolio = () => {
         </AnimatePresence>
       </motion.div>
 
-      {/* empty state */}
+      {/* empty state
       {filtered.length === 0 && (
         <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} className="text-center py-20 text-white/25 text-sm">
           No projects in this category yet.
         </motion.div>
-      )}
+      )} */}
     </section>
   );
 };
